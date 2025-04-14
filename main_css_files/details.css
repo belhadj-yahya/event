@@ -1,0 +1,223 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Main Content Styling */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.event_image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.settings {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.settings h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.info {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.count_down {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.seats {
+    font-size: 1rem;
+    color: #ff4d4d;
+    margin-bottom: 1rem;
+}
+
+.first_tarif,
+.second_tarif {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.first_tarif p,
+.second_tarif p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.first_tarif div,
+.second_tarif div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input[type="text"] {
+    width: 50px;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button.more1,
+button.less1,
+button.more2,
+button.less2 {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button.more1:hover,
+button.less1:hover,
+button.more2:hover,
+button.less2:hover {
+    background-color: #0056b3;
+}
+
+.error1,
+.error2 {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    display: none; /* Hidden by default, shown via JS */
+}
+
+.main_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.get {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.get:hover {
+    background-color: #218838;
+}
+
+.not_get {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: not-allowed;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+/* PDF Section */
+.pdf_stuff {
+    display: none; /* Hidden by default, shown via JS */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.pdf_stuff strong {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.pdf_stuff p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.ticket {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.ticket .black_two {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.ticket h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.ticket p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .settings {
+        padding: 1rem;
+    }
+
+    .pdf_stuff {
+        width: 90%;
+    }
+}

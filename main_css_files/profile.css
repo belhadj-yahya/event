@@ -1,0 +1,236 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.intro h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.intro_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.intro_div button.change {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.intro_div button.change img {
+    width: 24px;
+    height: 24px;
+    filter: invert(58%) sepia(14%) saturate(3176%) hue-rotate(193deg) brightness(109%) contrast(104%);
+}
+
+.intro_div form input[type="submit"] {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.intro_div form input[type="submit"]:hover {
+    background-color: #c82333;
+}
+
+/* Dialog (Settings Modal) */
+dialog {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+}
+
+dialog .content {
+    position: relative;
+}
+
+dialog .close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+dialog .close:hover {
+    color: #dc3545;
+}
+
+dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+dialog .d {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+dialog label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+dialog input[type="text"],
+dialog input[type="email"],
+dialog input[type="password"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+dialog .check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+dialog .insure {
+    width: 16px;
+    height: 16px;
+}
+
+dialog .send {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+dialog .send:hover {
+    background-color: #218838;
+}
+
+dialog .messages p {
+    display: none;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+dialog .messages .error1,
+dialog .messages .error2,
+dialog .messages .error3 {
+    color: red;
+}
+
+dialog .messages .ok {
+    color: green;
+}
+
+/* History Section */
+.history {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.history h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.event {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: calc(33% - 1rem);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.event:hover {
+    transform: translateY(-5px);
+}
+
+.event img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.event h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.event p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .event {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .intro_div {
+        flex-direction: column;
+    }
+
+    .event {
+        width: 100%;
+    }
+}
